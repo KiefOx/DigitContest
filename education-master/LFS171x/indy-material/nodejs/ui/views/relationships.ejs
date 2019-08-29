@@ -1,5 +1,5 @@
 <div id="relationships" class="tab" style="display:none;" >
-    <button class="w3-right w3-btn w3-white w3-border" style="margin:15px 20px;" onclick="document.getElementById('newRelationshipModel').style.display='block'">Send New Connection Request</button>
+    <button class="w3-right w3-btn w3-white w3-border" style="margin:15px 20px;" onclick="document.getElementById('newRelationshipModel').style.display='block'">Ajouter aux contacts</button>
     <div class="w3-padding">
         <div class="w3-third w3-border" style="width:33%; height:85vh; overflow:scroll;">
             <%for(let relationship of relationships) {%>
@@ -28,13 +28,13 @@
                         <%}%>
                         <div style="display:block;width:50%;margin:auto;">
                             <fieldset>
-                                <legend class="" style="border:none;margin:10px;">Relationship DIDs</legend>
-                                <p>My Did: <%=relationship.my_did%></p>
-                                <p>Their Did: <%=relationship.their_did%></p>
+                                <legend class="" style="border:none;margin:10px;">Nos DIDs</legend>
+                                <p>Mon DID: <%=relationship.my_did%></p>
+                                <p>Son DID: <%=relationship.their_did%></p>
                             </fieldset>
                         </div>
-                        <p>Their Public Did: <%=relationship.metadata.theirEndpointDid%></p>
-                        <p><b>Proofs:</b></p>
+                        <p>Son DID public: <%=relationship.metadata.theirEndpointDid%></p>
+                        <p><b>Justificatifs:</b></p>
                         <%if(relationship.metadata.proofs) {%>
                             <%for(let proof of relationship.metadata.proofs) {%>
                                 <div class="w3-bar w3-card">
@@ -45,7 +45,7 @@
                                         <%}%>
                                     </div>
                                     <div class="w3-bar-item">
-                                        <button class="w3-btn w3-white w3-border" style="display:block;margin: 20px 20px;height: 100px;width:100px;" type="submit" onclick="validateProof(this.parentNode, <%=JSON.stringify(proof)%>)">Validate</button>
+                                        <button class="w3-btn w3-white w3-border" style="display:block;margin: 20px 20px;height: 100px;width:100px;" type="submit" onclick="validateProof(this.parentNode, <%=JSON.stringify(proof)%>)">Approuver</button>
                                     </div>
                                 </div>
                                 <br><br>

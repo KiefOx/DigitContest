@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title><%=name%>'s Agent</title>
+        <title><%=name%></title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -87,14 +87,14 @@
                 <header class="w3-container w3-theme-l1">
         <span onclick="document.getElementById('newRelationshipModel').style.display='none'"
               class="w3-button w3-display-topright">×</span>
-                    <h4>Create a New Relationship</h4>
+                    <h4>Ajouter un contact</h4>
                 </header>
                 <div class="w3-padding">
                     <form class="w3-container w3-card-4 w3-padding" action="/api/send_connection_request" method="POST" target="_self">
                         <div class="w3-section">
-                            Recipient's Endpoint DID: <input class="w3-input" type="text" name="did" required>
+                            Son DID public: <input class="w3-input" type="text" name="did" required>
                         </div>
-                        <input class="w3-btn w3-white w3-border" style="display:block;margin:auto;" type="submit" value="Send Connection Request">
+                        <input class="w3-btn w3-white w3-border" style="display:block;margin:auto;" type="submit" value="Envoyer">
                     </form>
                 </div>
                 <footer class="w3-container w3-theme-l1">
@@ -108,21 +108,21 @@
             <div class="w3-modal-content w3-card-4 w3-animate-top">
                 <header class="w3-container w3-theme-l1">
                     <span onclick="document.getElementById('newMessageModel').style.display='none'" class="w3-button w3-display-topright">×</span>
-                    <h4>Send a Message</h4>
+                    <h4>Envoyer un message</h4>
                 </header>
                 <div class="w3-padding">
                     <!--The socket message way: onsubmit="sendSovrinMessage('urn:sovrin:agent:message_type:sovrin.org/ui/send_message', this)"-->
                     <form class="w3-container w3-card-4 w3-padding" action="/api/send_message" method="POST" target="_self" >
                         <div class="w3-section">
-                            Recipient: <input id="send_message_form_did" class="w3-input" type="text" name="did" value="<%=endpointDid%>">
+                            Destinataire: <input id="send_message_form_did" class="w3-input" type="text" name="did" value="<%=endpointDid%>">
                         </div>
                         <div class="w3-section">
                             Message: <textarea id="send_message_form_message" class="w3-input" name="message" rows="6" >{
-    "type":"SOME_TYPE",
-    "message":"test"
+    "Type":"SOME_TYPE",
+    "Message":"test"
 }</textarea>
                         </div>
-                        <input class="w3-btn w3-white w3-border" style="display:block;margin:auto;" type="submit" value="Send Message">
+                        <input class="w3-btn w3-white w3-border" style="display:block;margin:auto;" type="submit" value="Envoyer">
                     </form>
                 </div>
                 <footer class="w3-container w3-theme-l1">
@@ -155,14 +155,14 @@
 
         <div id="menubar" class="w3-bar w3-theme">
             <!--<a onclick="document.getElementById('aboutModel').style.display='block'" class="w3-right w3-bar-item w3-button w3-padding-16">About</a>-->
-            <a href="/logout" class="w3-right w3-bar-item w3-button w3-padding-16">Logout</a>
-            <a class="w3-right w3-bar-item w3-padding-16">Welcome <%=name%></a>
+            <a href="/logout" class="w3-right w3-bar-item w3-button w3-padding-16">Déconnexion</a>
+            <a class="w3-right w3-bar-item w3-padding-16">Bienvenue <%=name%></a>
             <a href=""><img class="w3-left w3-bar-item" width="55px" height="55px" src="/images/sovrinIcon.png"></a>
-            <a href="#relationships" id="relationships_link" class="w3-left w3-bar-item w3-button w3-padding-16 tab_link" onclick="showTab('relationships')" >Relationships</a>
-            <a href="#credentials" id="credentials_link" class="w3-left w3-bar-item w3-button w3-padding-16 tab_link" onclick="showTab('credentials')" >Credentials</a>
-            <a href="#proofs" id="proofs_link" class="w3-left w3-bar-item w3-button w3-padding-16 tab_link" onclick="showTab('proofs')" >Proof Requests</a>
-            <a href="#issuing" id="issuing_link" class="w3-left w3-bar-item w3-button w3-padding-16 tab_link" onclick="showTab('issuing')" >Issuing</a>
-            <a href="#messages" id="messages_link" class="w3-left w3-bar-item w3-button w3-padding-16 tab_link" onclick="showTab('messages')" >Messages</a>
+            <a href="#relationships" id="relationships_link" class="w3-left w3-bar-item w3-button w3-padding-16 tab_link" onclick="showTab('relationships')" >Mes contacts</a>
+            <a href="#credentials" id="credentials_link" class="w3-left w3-bar-item w3-button w3-padding-16 tab_link" onclick="showTab('credentials')" >Mes justificatifs</a>
+            <a href="#proofs" id="proofs_link" class="w3-left w3-bar-item w3-button w3-padding-16 tab_link" onclick="showTab('proofs')" >Demander un justificatif</a>
+            <a href="#issuing" id="issuing_link" class="w3-left w3-bar-item w3-button w3-padding-16 tab_link" onclick="showTab('issuing')" >Envoyer un justificatif</a>
+            <a href="#messages" id="messages_link" class="w3-left w3-bar-item w3-button w3-padding-16 tab_link" onclick="showTab('messages')" >Notifications</a>
         </div>
         <!--<div class="w3-container w3-card" style="position:fixed;bottom:52px;float:right; right:50px;width:300px;z-index:99;background:white;">-->
             <!--<h5>Chat with Andrew</h5>-->
@@ -189,7 +189,7 @@
             <% include messages.ejs %>
         </div>
         <footer style="position:fixed;bottom:0;background: black;width: 100%;">
-            <p style="text-align: center;color: white;">My Endpoint DID: <%=endpointDid%></p>
+            <p style="text-align: center;color: white;">My Mon DID public: <%=endpointDid%></p>
         </footer>
         <script>
 

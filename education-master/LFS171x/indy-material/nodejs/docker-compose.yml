@@ -123,7 +123,7 @@ services:
       - ICON_SRC=https://maxcdn.icons8.com/Share/icon/Users/person_female1600.png
       - THEME=DarkGray
       - PORT=3000
-      - NAME=manuia
+      - NAME=Manuia
       - EMAIL=manuia@entrepreneur.pf
       - PASSWORD=123
       - USERNAME=manuia

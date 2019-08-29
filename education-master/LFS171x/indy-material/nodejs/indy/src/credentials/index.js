@@ -72,6 +72,12 @@ exports.acceptRequest = async function(theirDid, encryptedMessage) {
             case "BP":
                 value = "330152x";
                 break;
+            case "adresse":
+                value = "Pk 21, 600 ct. mer";
+                break;
+            case "commune":
+                value = "Paea";
+                break;
             case "sexe":
                 value = "F";
                 break;
@@ -80,6 +86,18 @@ exports.acceptRequest = async function(theirDid, encryptedMessage) {
                 break;
             case "lieu_naissance":
                 value = "Moruroa";
+                break;
+            case "n_tahiti":
+                value = "D12345";
+                break;
+            case "n_tahiti_iti":
+                value = "123";
+                break;
+            case "activite":
+                value = "4791A Vente à distance";
+                break;
+            case "inscription":
+                value = "30/08/2019";
                 break;
             default:
                 value = "someValue";

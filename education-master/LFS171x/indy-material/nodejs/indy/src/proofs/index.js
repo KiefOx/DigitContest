@@ -27,10 +27,10 @@ exports.getProofRequests = async function(force) {
             },
             requested_predicates: {}
         };
-        let transcriptCredDef = await indy.issuer.getCredDefByTag('MyTranscript');
+        let transcriptCredDef = await indy.issuer.getCredDefByTag('Informations');
         if(transcriptCredDef) {
-            proofRequests['Transcript-Data'] = {
-                name: 'Transcript-Data',
+            proofRequests['Info-Perso'] = {
+                name: 'Info-Perso',
                 version: '0.1',
                 requested_attributes: {
                     'attr1_referent': {
@@ -38,16 +38,21 @@ exports.getProofRequests = async function(force) {
                         'restrictions': [{'cred_def_id': transcriptCredDef.id}]
                     },
                     'attr2_referent': {
-                        'name': 'BP',
+                        'name': 'adresse',
                         'restrictions': [{'cred_def_id': transcriptCredDef.id}]
                     },
 
                     'attr3_referent': {
-                        'name': 'date_naissance',
+                        'name': 'commune',
                         'restrictions': [{'cred_def_id': transcriptCredDef.id}]
                     },
 
                     'attr4_referent': {
+                        'name': 'date_naissance',
+                        'restrictions': [{'cred_def_id': transcriptCredDef.id}]
+                    },
+
+                    'attr5_referent': {
                         'name': 'lieu_naissance',
                         'restrictions': [{'cred_def_id': transcriptCredDef.id}]
                     }

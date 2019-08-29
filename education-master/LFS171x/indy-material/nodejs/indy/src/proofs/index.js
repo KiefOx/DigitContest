@@ -41,10 +41,12 @@ exports.getProofRequests = async function(force) {
                         'name': 'BP',
                         'restrictions': [{'cred_def_id': transcriptCredDef.id}]
                     },
+
                     'attr3_referent': {
                         'name': 'date_naissance',
                         'restrictions': [{'cred_def_id': transcriptCredDef.id}]
-                    }
+                    },
+
                     'attr4_referent': {
                         'name': 'lieu_naissance',
                         'restrictions': [{'cred_def_id': transcriptCredDef.id}]

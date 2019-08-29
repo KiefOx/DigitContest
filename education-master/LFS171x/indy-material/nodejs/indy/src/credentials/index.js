@@ -60,20 +60,26 @@ exports.acceptRequest = async function(theirDid, encryptedMessage) {
             case "name":
                 value = await indy.pairwise.getAttr(theirDid, 'name') || "Alice";
                 break;
-            case "degree":
-                value = "Bachelor of Science, Marketing";
+            case "pere":
+                value = "Marc";
                 break;
-            case "status":
-                value = "graduated";
+            case "mere":
+                value = "Timeri";
                 break;
-            case "ssn":
-                value = "123-45-6789";
+            case "nationalite":
+                value = "FR";
                 break;
-            case "year":
-                value = "2015";
+            case "BP":
+                value = "330152x";
                 break;
-            case "average":
-                value = "5";
+            case "sexe":
+                value = "F";
+                break;
+            case "date_naissance":
+                value = "01/01/1991";
+                break;
+            case "lieu_naissance":
+                value = "Moruroa";
                 break;
             default:
                 value = "someValue";

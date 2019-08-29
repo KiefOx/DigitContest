@@ -34,15 +34,15 @@ exports.getProofRequests = async function(force) {
                 version: '0.1',
                 requested_attributes: {
                     'attr1_referent': {
-                        'name': 'degree',
+                        'name': 'nationalite',
                         'restrictions': [{'cred_def_id': transcriptCredDef.id}]
                     },
                     'attr2_referent': {
-                        'name': 'status',
+                        'name': 'BP',
                         'restrictions': [{'cred_def_id': transcriptCredDef.id}]
                     },
                     'attr3_referent': {
-                        'name': 'year',
+                        'name': 'date_naissance',
                         'restrictions': [{'cred_def_id': transcriptCredDef.id}]
                     }
                 },

@@ -19,7 +19,7 @@ Cliquez sur le boutton "Start" pour lancer un environement que vous pourrez util
 > **Astuce**: Pour coller du texte dans la fenêtre du terminal, cliquez avec le bouton droit de la souris sur la fenêtre et choisissez `paste` ou faite CTRL+SHIFT+V.
 
 - Naviguez jusqu'à l'emplacement du code en exécutant la commande:
-  - `cd DigitContest/education-master/LFS171x/indy-material/nodejs/`
+  - `cd DigitContest/nodejs/`
 
 
 ## Commencer la démonstration

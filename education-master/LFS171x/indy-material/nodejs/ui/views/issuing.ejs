@@ -1,6 +1,6 @@
 <div id="issuing" class="tab" style="display:none;">
     <div class="w3-container w3-card w3-padding w3-margin" style="float: left;width: 31%">
-        <h3>Créer un schéma d'informations: </h3>
+        <h3> >Créer un schéma d'informations< </h3>
         <form method="POST" action="/api/issuer/create_schema">
             <label>Nom du schéma: </label>
             <input type="text" class="w3-input" name="name_of_schema" placeholder="Entrer un nom..." value="Mes Informations" required>
@@ -28,7 +28,7 @@
 
     <div style="float: left;width: 31%">
         <div class="w3-container w3-card w3-padding w3-margin">
-            <h3>>Créer une définition de justificatif d'identité</h3>
+            <h3> >Créer une définition de justificatif d'identité< </h3>
             <form method="POST" action="/api/issuer/create_cred_def">
                 <label>Selectionner un schéma:</label>
                 <select class="w3-select" name="schema_id" required>
@@ -44,7 +44,7 @@
             </form>
         </div>
         <div class="w3-container w3-card w3-padding w3-margin">
-            <h3>Envoyer l'offre de justificatif</h3>
+            <h3> >Envoyer l'offre de justificatif < </h3>
             <form method="POST" action="/api/issuer/send_credential_offer">
                 <label>Contact: </label>
                 <select class="w3-select" name="their_relationship_did" required>

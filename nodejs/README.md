@@ -1,4 +1,5 @@
 Demonstration Digital Contest
+Voici un lien vidéo pour prendre connaissance du prototype https://www.youtube.com/watch?v=pjZk9GZIZuI
 
 Ce dossier contient une démonstration des agents Hyperledger Indy basique. Les agents fournissent une interface de navigateur Web pour montrer l'établissement des relations entre les agents, l'émission de justificatifs d'identité vérifiables et la preuve des demandes à partir de justificatifs d'identité vérifiables.
 

@@ -27,7 +27,7 @@ exports.getProofRequests = async function(force) {
             },
             requested_predicates: {}
         };
-        let transcriptCredDef = await indy.issuer.getCredDefByTag('Informations');
+        let transcriptCredDef = await indy.issuer.getCredDefByTag('MesInfos');
         if(transcriptCredDef) {
             proofRequests['Info-Perso'] = {
                 name: 'Info-Perso',

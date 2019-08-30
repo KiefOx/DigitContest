@@ -51,7 +51,7 @@ Vous pouvez également ouvrir dans un navigateur un Explorateur de Ledger Blockc
 
 > Le reste des numéros (ports - 9701-9708) sont les ports vers les nœuds du Ledger de la chaîne de blocage - deux par nœud.
 
-
+Pour voir une démonstration, lancez la vidéo situé dans le dossier Démo.
 
 ## Arrêter la démo
 

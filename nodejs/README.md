@@ -31,7 +31,7 @@ Cliquez sur le boutton "Start" pour lancer un environement que vous pourrez util
 Il faut du temps pour que la démo démarre - beaucoup de choses se passent. Les journaux de tous les conteneurs s'affichent dans la fenêtre du terminal. Les journaux montrent l'édition des nœuds du "ledger" de la chaîne de blocs qui communiquent et des agents Indy qui démarrent et communiquent avec le "ledger".
 
 * Vous devriez voir périodiquement des choses comme "Listening on port 3001", ce qui indique qu'un agent est opérationnel.
-* Utilisez Ctrl-c pour stopper la démo.
+
 
 
 ### Accéder aux agents:
@@ -55,10 +55,10 @@ Pour voir une démonstration, lancez la vidéo situé dans le dossier Démo.
 
 ## Arrêter la démo
 
-Pour arrêter la démo, allez dans l'onglet du navigateur où vous avez lancé et fermer la fenêtre. Notez que si vous ne fermez pas l'onglet, la session terminal expirera 4 heures après son démarrage..
+Pour arrêter la démo, allez dans l'onglet du navigateur où vous avez lancé et fermer la fenêtre. Notez que si vous ne fermez pas l'onglet, la session terminal expirera 4 heures après son démarrage.
 
-# Trouble Shooting
+Ou utilisez Ctrl-c pour stopper la démo.
 
-> As issues are discovered by users of this demo, we'll add more troubleshooting instructions here.
+# Avertissement
 
 * La "validation" de la "Government-ID" pour chacune des identités échoue souvent - un grand "X" rouge s'affiche.
